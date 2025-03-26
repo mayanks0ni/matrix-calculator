@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 // Each function will be called from it's respective file header file.
-#include "./operations/add.h"
-#include "./operations/subtract.h"
+#include "./util/genMatrix.c"
+#include "./util/getInputReturnOperation.c"
+#include "./operations/addMatrix.c"
+#include "./operations/subMatrix.c"
 
 int main()
 {
@@ -15,20 +17,10 @@ int main()
         int n;
         printf("Enter the row/column count of the square matrix: ");
         scanf("%i", &n);
-        printf("Enter the elements separated by space: ");
         int matrix[n][n];
-        int (*element)[n][n] = &matrix;
-        for (int i = 0; i < n; i++)
-        {
-            for (int j = 0; j < n; j++)
-            {
-                scanf("%i", &(*element)[i][j]);
-            }
-        }
-
-        int opn;
-        printf("Enter the number of the operation you want to perform: \n1) Addition\n2) Subtraction\n3) Multiplication\n4) Transpose\n5) Adjoint\n6) Cofactor\n7) Inverse\n");
-        scanf("%i", &opn);
+        int (*element)[n][n] = &matrix; // pointer defined for iterating in the matrix.
+        genMatrix(n, n, element); // generating the matrix using the function defined.
+        int opn = getInputReturnOperation(); //fetching the operation user wants to perform.
         if (opn > 7 || opn < 1)
             return 0;
         switch (opn)
@@ -45,7 +37,7 @@ int main()
                     scanf("%i", &(*toAddE)[i][j]);
                 }
             }
-            addMatrix(n, element, toAddE);
+            addMatrix(n, n, element, toAddE);
             break;
         }
 
@@ -61,7 +53,7 @@ int main()
                     scanf("%i", &(*toSubE)[i][j]);
                 }
             }
-            subMatrix(n, element, toSubE);
+            subMatrix(n, n, element, toSubE);
             break;
         }
         }
