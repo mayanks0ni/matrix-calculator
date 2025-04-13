@@ -1,21 +1,20 @@
-#include "../headers/add.h"
+#include "../headers/operations.h"
 
-int addMatrix(int row, int column, int (*m1)[row][column], int (*m2)[row][column])
+int addMatrix(int row, int column, float**m1, float** m2)
 {
-    int resMatrix[row][column];
-    int(*resMatrixE)[row][column] = &resMatrix;
+    float** resMatrix = allocateMatrix(row, column);
     for (int i = 0; i < row; i++)
     {
         for (int j = 0; j < column; j++)
         {
-            (*resMatrixE)[i][j] = (*m1)[i][j] + (*m2)[i][j];
+            resMatrix[i][j] = m1[i][j] + m2[i][j];
         }
     }
     for (int i = 0; i < row; i++)
     {
         for (int j = 0; j < column; j++)
         {
-            printf("%i ", (*resMatrixE)[i][j]);
+            printf("%.2f ", resMatrix[i][j]);
         }
         printf("\n");
     }

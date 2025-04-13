@@ -1,0 +1,18 @@
+
+Time taken for 500x500 Matrix in C: 0.6200000 seconds
+
+Time taken for 800x800 Matrix in C: 3.1480000 seconds
+
+Time taken for 1000x1000 Matrix in C: 7.4650000 seconds
+
+Time taken for 1200x1200 Matrix in C: 13.2500000 seconds
+
+after changing algorithm
+
+Time taken for 1200x1200 Matrix in C: 4.9260000 seconds
+
+Time taken for 1000x1000 Matrix in C: 2.9310000 seconds
+
+Time taken for 800x800 Matrix in C: 1.5160000 seconds
+
+Time taken for 500x500 Matrix in C: 0.3740000 seconds

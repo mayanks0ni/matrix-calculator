@@ -1,0 +1,17 @@
+Matrix Calculator
+
+Performs all the operations mentioned below for a square matrix and first four operations for a n x m matrix.
+
+All Operations -
+- Addition
+- Subtraction
+- Transpose
+- Multiplication
+- Adjoint
+- Cofactor Matrix
+- Inverse
+
+- Use pointers when defining matrix array while making any operation function.
+- Check previous header files to understand the syntax of the function.
+- I'm explaining what I'm doing roughly, I have made different functions for each operation. Each functions are present in different header files in the "operations" folder. "extern" keyword used in the header file is like exporting the code I've written to a header file basically making the compiler understand that it is a header file. "(*m1)[size][size]" is basically making a 2D array pointer and it works same as array[i][j], the only difference is that this thing is a pointer essentially fulfilling our requirement that we have to use pointers. Rest is mostly what we have to do like in addMatrix function I've added the elements of each matrix, in submatrix I've subtracted, similarly other functions will also be made.
+- Read the main.c file too.
