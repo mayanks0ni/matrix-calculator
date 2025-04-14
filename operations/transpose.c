@@ -6,7 +6,7 @@ void transpose(int rows, int column, float**m, float**tm)
     {
         for (int j = 0; j < column; j++)
         {
-            tm[i][j] = m[j][i];
+            tm[j][i] = m[i][j];
         }
     }
 }
